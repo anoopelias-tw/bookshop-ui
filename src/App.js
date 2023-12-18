@@ -44,9 +44,10 @@ const Tokens = () => {
         }).then((response) => {
             return response.json();
         }).then ((responseJson) => {
+            console.log("set");
             setTokens(responseJson);
         });
-    }, {});
+    }, []);
 
     return <div>Tokens:
             <p>access_token:{tokens["access_token"]}</p>
