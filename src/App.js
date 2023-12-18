@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Header from './Header/Header';
 
 function login() {
-    window.location.href = "http://localhost:8090/default/authorize?client_id=debugger&scope=openid+user&response_type=code&response_mode=query&state=1234&nonce=5678&redirect_uri=http%3A%2F%2Flocalhost%3A3000";
+    window.location.href = "http://localhost:8090/default/authorize?client_id=bookshop&scope=openid+user&response_type=code&response_mode=query&state=1234&nonce=5678&redirect_uri=http%3A%2F%2Flocalhost%3A3000";
 }
 
 const Tokens = () => {
@@ -21,7 +21,7 @@ const Tokens = () => {
         const data = {
             code: code,
             grant_type: "authorization_code",
-            scope: "openid role",
+            scope: "openid user",
             redirect_uri: "http://localhost:3000",
             client_id: "bookshop",
         };
